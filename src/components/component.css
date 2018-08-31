@@ -1,0 +1,114 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: rgba(235, 235, 224, 0.9);
+    /*background-image: linear-gradient(white, lightgrey);*/
+    height: 100%;
+
+}
+
+.Main_Images{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/fastfood_chain.jpg");
+    background-position: center;
+
+}
+
+.kep-login-facebook{
+    position:absolute;
+    top:35vh;
+    left:40vw;
+}
+
+
+.Review{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.WriteReview_Component{
+    padding: 18px;
+}
+
+.Stars_Component{
+    padding-left: 30px;
+}
+
+.Autocomplete_div{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.Search_Map{
+   flex-direction: column;
+}
+
+.Searching_Map{
+    position: relative;
+}
+
+.fb_Logged{
+    position: absolute;
+    width: 190px;
+    margin: auto;
+    background: rgb(235, 235, 224);
+    padding: 15px;
+    top:680px;
+    left: 250px;
+}
+
+.location-search-input{
+    height: 60px;
+    width: 350px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    font-size: 17px;
+    border-radius: 15px;
+
+}
+
+.Logo_Navigation{
+    background-image: linear-gradient(red, white);
+    height: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.Logo_Name{
+    text-align: center;
+    position: absolute;
+    top:23px;
+    left: 30px;
+    font-family: "Arial", sans-serif;
+}
+
+.Logo_Name::before{
+    content: " ";
+    background-image: url("../images/fastfood.png");
+    z-index: 10000;
+}
+
+.All_Components{
+    max-width: 1300px;
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+
