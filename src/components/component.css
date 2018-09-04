@@ -48,6 +48,10 @@ body{
     padding: 0;
 }
 
+.Address_Name{
+    padding: 10px;
+}
+
 .Search_Map{
    flex-direction: column;
 }
@@ -63,12 +67,12 @@ body{
     background: rgb(235, 235, 224);
     padding: 15px;
     top:680px;
-    left: 250px;
+    right: 600px;
 }
 
 .location-search-input{
     height: 60px;
-    width: 350px;
+    width: 500px;
     margin: 10px;
     display: flex;
     justify-content: center;

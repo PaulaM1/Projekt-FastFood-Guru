@@ -77,8 +77,8 @@ class LocationSearchInput extends React.Component {
                         )}
                     </PlacesAutocomplete>
                </div>
-                    <div>
-                        <h3>{this.props.value}</h3>
+                    <div className="Address_Name">
+                        <h3>{this.state.address}</h3>
                     </div>
                     <div className="Main_Map">
                         <Maps latlng={this.state.latlng} />
@@ -117,7 +117,7 @@ class Maps extends React.Component {
         var uluru = this.state.latlng;
         // The map, centered at Warsaw
         this.map = new google.maps.Map(this.mapContainer, {
-            zoom: 12,
+            zoom: 17,
             center: uluru
         });
 

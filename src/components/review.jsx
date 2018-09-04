@@ -11,7 +11,11 @@ class Review extends React.Component{
             text2: "",
             posts: [],
             stars: [],
-            currentStars: ""
+            stars1: 0,
+            stars2: 0,
+            stars3: 0,
+            stars4: 0,
+
         }
     }
 
@@ -26,11 +30,14 @@ class Review extends React.Component{
         this.setState({
             text2: this.state.text,
             posts: [...this.state.posts, this.state.text],
-            stars: [...this.state.stars, this.state.currentStars]
+            stars: [...this.state.stars, [this.state.stars1, this.state.stars2, this.state.stars3, this.state.stars4]],
 
         }, () => {
             this.setState({
-                currentStars: []
+                stars1: 0,
+                stars2: 0,
+                stars3: 0,
+                stars4: 0,
             })
         })
     }
@@ -39,21 +46,29 @@ class Review extends React.Component{
         const counter = 0;
         const arr = [];
         console.log(newRating1)
-        // this.setState({
-        //     currentStars: newRating
-        // })
+        this.setState({
+            stars1: newRating1
+        })
     }
 
     ratingChanged2 = (newRating2) => {
         console.log(newRating2)
+        this.setState({
+            stars2: newRating2
+        })
     }
 
     ratingChanged3 = (newRating3) => {
-        console.log(newRating3)
+        this.setState({
+            stars3: newRating3
+        })
     }
 
     ratingChanged4 = (newRating4) => {
         console.log(newRating4)
+        this.setState({
+            stars4: newRating4
+        })
     }
 
     ratingSum = () => {
@@ -97,8 +112,7 @@ class Review extends React.Component{
         let posts = this.state.posts.map((e,i)=> {
             return <li style={styleListElement} key={i}>
                 {e}
-                <ReactStars count={5} onChange={this.state.stars[i]} size={18} color2={'red'} color1={'grey'} half={false}/>
-                {/*{this.state.stars[i]}*/}
+                <ReactStars count={5} value={Math.round(this.state.stars[i].reduce((p,n) => p+n) / this.state.stars[i].length)} onChange={this.state.stars[i]} size={18} color2={'red'} color1={'grey'} half={false}/>
                 </li>
         })
 
